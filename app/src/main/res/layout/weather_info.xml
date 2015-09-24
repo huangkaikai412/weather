@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!--Title-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="#ffcd2626"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/title_city_manager"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:src="@drawable/title_city" />
+
+        <ImageView
+            android:id="@+id/city_seperator"
+            android:layout_width="1.5dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="2.0dip"
+            android:layout_toRightOf="@id/title_city_manager"
+            android:background="#A71717" />
+
+        <TextView
+            android:id="@+id/title_city_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="北京天气"
+            android:layout_toRightOf="@id/city_seperator"
+            android:gravity="center_vertical"
+            android:paddingLeft="8.0dip"
+            android:textColor="#ffffff"
+            android:textSize="22.0sp" />
+
+        <ImageView
+            android:id="@+id/title_update_btn"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/title_update" />
+
+        <ImageView
+            android:id="@+id/title_share_btn"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_toLeftOf="@id/title_update_btn"
+            android:src="@drawable/title_share" />
+
+        <ImageView
+            android:id="@+id/title_location_btn"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_toLeftOf="@id/title_share_btn"
+            android:src="@drawable/base_action_bar_action_city" />
+
+    </RelativeLayout>
+
+    <!--Weather Info-->
+    <LinearLayout
+        android:id="@+id/info"
+        android:orientation="vertical"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dip"
+        android:background="@drawable/biz_plugin_weather_shenzhen_bg">
+
+        <!--Today's Weather-->
+        <RelativeLayout
+            android:id="@+id/weather_today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--City&Time-->
+            <LinearLayout
+                android:id="@+id/citytime"
+                android:orientation="vertical"
+                android:paddingLeft="15dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/city_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:text="北京"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dip"
+                    android:gravity="center_vertical"
+                    android:text="今天18:25发布"
+                    android:layout_below="@id/city_name"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dip"
+                    android:gravity="center_vertical"
+                    android:text="湿度57%"
+                    android:layout_below="@id/time"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <!--PM Info-->
+            <RelativeLayout
+                android:id="@+id/PMcontent"
+                android:orientation="vertical"
+                android:paddingRight="15dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/pm_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/biz_plugin_weather_0_50" />
+
+                <LinearLayout
+                    android:id="@+id/pm"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dip"
+                    android:layout_toLeftOf="@id/pm_img">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PM2.5"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="#ffffff"
+                        android:textSize="35sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pm"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="5dip"
+                    android:paddingRight="8dip"
+                    android:text="重度污染"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/weather_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/citytime"
+                android:padding="10dip"
+                android:src="@mipmap/biz_plugin_weather_qing" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/weather_img"
+                android:padding="15dip"
+                android:layout_below="@id/PMcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今天 星期三"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-2°C~7°C"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="多云转晴"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微风"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
