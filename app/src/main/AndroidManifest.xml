@@ -2,11 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pku.ss.kitty.myweather" >
 
+    <!-- 增加访问网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 增加访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="pku.ss.kitty.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!--主界面-->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -15,6 +22,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!--城市列表界面-->
+        <activity
+            android:name=".SelectCity"
+            android:label="@string/title_activity_select_city" >
         </activity>
     </application>
 

@@ -84,7 +84,7 @@
 
                 <TextView
                     android:id="@+id/city_name"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dip"
                     android:text="北京"
@@ -93,7 +93,7 @@
 
                 <TextView
                     android:id="@+id/time"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="25dip"
                     android:gravity="center_vertical"
                     android:text="今天18:25发布"
@@ -103,7 +103,7 @@
 
                 <TextView
                     android:id="@+id/humidity"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="25dip"
                     android:gravity="center_vertical"
                     android:text="湿度57%"
@@ -123,8 +123,8 @@
 
                 <ImageView
                     android:id="@+id/pm_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentRight="true"
                     android:src="@mipmap/biz_plugin_weather_0_50" />
 
@@ -144,6 +144,7 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/pm_data"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="100"
@@ -153,6 +154,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/pm_quality"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/pm"
@@ -167,8 +169,8 @@
 
             <ImageView
                 android:id="@+id/weather_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_below="@id/citytime"
                 android:padding="10dip"
                 android:src="@mipmap/biz_plugin_weather_qing" />
@@ -176,12 +178,13 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_toRightOf="@id/weather_img"
-                android:padding="15dip"
                 android:layout_below="@id/PMcontent"
+                android:paddingTop="15dip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/week_today"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="今天 星期三"
@@ -189,6 +192,7 @@
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="-2°C~7°C"
@@ -196,6 +200,7 @@
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/climate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="多云转晴"
@@ -203,6 +208,7 @@
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/wind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="微风"
